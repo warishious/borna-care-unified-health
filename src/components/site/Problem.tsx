@@ -12,17 +12,20 @@ const PROBLEMS = [
 export function Problem() {
   return (
     <section id="solutions" className="relative py-28 sm:py-32">
+      <div className="pointer-events-none absolute inset-0 -z-10">
+        <div className="absolute top-1/3 -left-40 size-[520px] rounded-full bg-forest/10 blur-3xl" />
+      </div>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-2 rounded-full bg-secondary px-3 py-1 text-xs font-semibold uppercase tracking-widest text-forest-deep">
+          <div className="inline-flex items-center gap-2 rounded-full glass-elevated px-3 py-1 text-xs font-semibold uppercase tracking-widest text-sage">
             The problem
           </div>
-          <h2 className="mt-5 font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-navy">
+          <h2 className="mt-5 font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-white">
             Healthcare still runs on
             <br />
-            <span className="italic text-forest">disconnected software</span>.
+            <span className="italic gradient-green-text">disconnected software</span>.
           </h2>
-          <p className="mt-5 text-lg text-muted-foreground">
+          <p className="mt-5 text-lg text-white/60">
             Six different tools, three separate logins, and a reception team
             that spends more time reconciling systems than caring for people.
           </p>
@@ -32,16 +35,16 @@ export function Problem() {
           {PROBLEMS.map((p, i) => (
             <div
               key={p.title}
-              className="group relative overflow-hidden rounded-2xl border border-border bg-white p-6 transition-all duration-500 hover:-translate-y-1 hover:shadow-elegant hover:border-forest/30"
+              className="group relative overflow-hidden rounded-2xl glass-elevated p-6 transition-all duration-500 hover:-translate-y-1 hover:shadow-elegant hover:border-forest/40"
               style={{ animationDelay: `${i * 60}ms` }}
             >
-              <div className="absolute -right-8 -top-8 size-24 rounded-full bg-destructive/5 blur-2xl transition-opacity group-hover:opacity-0" />
+              <div className="absolute -right-8 -top-8 size-24 rounded-full bg-destructive/10 blur-2xl transition-opacity group-hover:opacity-40" />
               <div className="relative">
-                <div className="grid size-11 place-items-center rounded-xl bg-destructive/10 text-destructive">
+                <div className="grid size-11 place-items-center rounded-xl bg-destructive/15 text-destructive ring-1 ring-destructive/20">
                   <p.icon className="size-5" />
                 </div>
-                <h3 className="mt-4 font-display text-2xl text-navy">{p.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                <h3 className="mt-4 font-display text-2xl text-white">{p.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-white/55">
                   {p.copy}
                 </p>
               </div>

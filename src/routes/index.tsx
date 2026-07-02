@@ -9,6 +9,7 @@ import { MultiBranch } from "@/components/site/MultiBranch";
 import { Comparison } from "@/components/site/Comparison";
 import { Integrations } from "@/components/site/Integrations";
 import { FinalCTA } from "@/components/site/FinalCTA";
+import { Delivers } from "@/components/site/Delivers";
 import { Footer } from "@/components/site/Footer";
 
 export const Route = createFileRoute("/")({
@@ -26,6 +27,7 @@ function Index() {
         <TwoExperiences />
         <Features />
         <MultiBranch />
+        <Delivers />
         <Comparison />
         <Integrations />
         <FinalCTA />

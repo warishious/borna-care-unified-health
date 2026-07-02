@@ -11,6 +11,7 @@ import {
   History,
   ArrowRight,
 } from "lucide-react";
+import { FEATURE_MOCK_REGISTRY } from "./FeatureMocks";
 
 const FEATURES = [
   {
@@ -119,13 +120,17 @@ export function Features() {
   const current = FEATURES.find((f) => f.id === active)!;
 
   return (
-    <section className="relative py-28 sm:py-32 bg-soft">
+    <section className="relative py-28 sm:py-32">
+      <div className="pointer-events-none absolute inset-0 -z-10">
+        <div className="absolute top-40 right-0 size-[520px] rounded-full bg-forest/10 blur-3xl" />
+        <div className="absolute bottom-20 left-0 size-[420px] rounded-full bg-moss/10 blur-3xl" />
+      </div>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1 text-xs font-semibold uppercase tracking-widest text-forest-deep shadow-card">
+          <div className="inline-flex items-center gap-2 rounded-full glass-elevated px-3 py-1 text-xs font-semibold uppercase tracking-widest text-sage">
             The solution
           </div>
-          <h2 className="mt-5 font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-navy">
+          <h2 className="mt-5 font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-white">
             Every feature starts with
             <br />
             <span className="italic gradient-green-text">a real clinic problem</span>.
@@ -142,17 +147,17 @@ export function Features() {
                   <button
                     key={f.id}
                     onClick={() => setActive(f.id)}
-                    className={`shrink-0 lg:shrink flex items-center gap-3 rounded-xl border px-3.5 py-2.5 text-left transition-all ${
+                    className={`shrink-0 lg:shrink flex items-center gap-3 rounded-xl border px-3.5 py-2.5 text-left transition-all duration-300 ${
                       isActive
-                        ? "border-forest/40 bg-white shadow-card text-navy"
-                        : "border-transparent text-navy/70 hover:bg-white/70"
+                        ? "border-forest/40 bg-white/[0.06] backdrop-blur shadow-card text-white"
+                        : "border-transparent text-white/60 hover:text-white hover:bg-white/[0.03]"
                     }`}
                   >
                     <span
-                      className={`grid size-8 place-items-center rounded-lg ${
+                      className={`grid size-8 place-items-center rounded-lg transition-all ${
                         isActive
-                          ? "bg-[image:var(--gradient-green)] text-white"
-                          : "bg-secondary text-forest-deep"
+                          ? "bg-[image:var(--gradient-green)] text-white shadow-glow-green"
+                          : "bg-white/[0.06] text-sage"
                       }`}
                     >
                       <f.icon className="size-4" />
@@ -169,26 +174,26 @@ export function Features() {
           {/* Active content */}
           <div
             key={current.id}
-            className="animate-fade-up rounded-3xl border border-border bg-white p-8 sm:p-10 shadow-elegant"
+            className="animate-fade-up rounded-3xl glass-elevated p-8 sm:p-10 shadow-elegant"
           >
             <div className="grid md:grid-cols-2 gap-8 items-start">
               <div>
                 <div className="text-[11px] font-semibold uppercase tracking-widest text-destructive">
                   The problem
                 </div>
-                <p className="mt-2 text-lg leading-relaxed text-navy/70 italic">
+                <p className="mt-2 text-lg leading-relaxed text-white/70 italic">
                   "{current.problem}"
                 </p>
 
-                <div className="mt-8 h-px bg-border" />
+                <div className="mt-8 h-px bg-white/10" />
 
-                <div className="mt-8 text-[11px] font-semibold uppercase tracking-widest text-forest-deep">
+                <div className="mt-8 text-[11px] font-semibold uppercase tracking-widest text-sage">
                   With Borna Care
                 </div>
-                <h3 className="mt-2 font-display text-3xl sm:text-4xl leading-tight text-navy">
+                <h3 className="mt-2 font-display text-3xl sm:text-4xl leading-tight text-white">
                   {current.title}
                 </h3>
-                <p className="mt-3 text-muted-foreground leading-relaxed">
+                <p className="mt-3 text-white/60 leading-relaxed">
                   {current.copy}
                 </p>
 
@@ -196,62 +201,33 @@ export function Features() {
                   {current.stats.map((s) => (
                     <div
                       key={s.v}
-                      className="rounded-xl bg-secondary p-4"
+                      className="rounded-xl bg-white/[0.04] border border-white/10 p-4"
                     >
-                      <div className="font-display text-3xl text-forest-deep">
+                      <div className="font-display text-3xl gradient-green-text">
                         {s.k}
                       </div>
-                      <div className="text-xs text-muted-foreground">{s.v}</div>
+                      <div className="text-xs text-white/50">{s.v}</div>
                     </div>
                   ))}
                 </div>
 
                 <a
                   href="https://borna.ai/demo/"
-                  className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-forest hover:gap-2.5 transition-all"
+                  className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-sage hover:text-white hover:gap-2.5 transition-all"
                 >
                   See it live in a demo <ArrowRight className="size-4" />
                 </a>
               </div>
 
-              {/* Visual */}
-              <div className="relative aspect-[4/3] rounded-2xl bg-[image:var(--gradient-hero)] p-6 overflow-hidden">
-                <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,color-mix(in_oklab,var(--moss)_30%,transparent),transparent_60%)]" />
-                <div className="relative flex items-center gap-3">
-                  <span className="grid size-12 place-items-center rounded-xl bg-[image:var(--gradient-green)] text-white shadow-glow-green">
-                    <current.icon className="size-6" />
-                  </span>
-                  <div>
-                    <div className="text-[11px] uppercase tracking-widest text-muted-foreground">
-                      Live in dashboard
-                    </div>
-                    <div className="font-display text-xl text-navy">
-                      {current.title.split(",")[0]}
-                    </div>
-                  </div>
+              {/* Per-feature unique mock */}
+              <div className="relative">
+                <div className="pointer-events-none absolute -inset-6 rounded-3xl bg-[image:var(--gradient-green)] opacity-20 blur-3xl" />
+                <div className="relative">
+                  {(() => {
+                    const Mock = FEATURE_MOCK_REGISTRY[current.id];
+                    return Mock ? <Mock /> : null;
+                  })()}
                 </div>
-
-                <div className="relative mt-6 space-y-2">
-                  {[0, 1, 2, 3].map((i) => (
-                    <div
-                      key={i}
-                      className="glass rounded-xl px-3 py-2.5 flex items-center gap-3"
-                    >
-                      <span className="size-2 rounded-full bg-moss animate-pulse" style={{ animationDelay: `${i * 200}ms` }} />
-                      <div className="h-2 flex-1 rounded-full bg-secondary overflow-hidden">
-                        <div
-                          className="h-full rounded-full bg-[image:var(--gradient-green)]"
-                          style={{ width: `${45 + i * 15}%` }}
-                        />
-                      </div>
-                      <div className="text-[10px] font-semibold text-navy w-8 text-right">
-                        {45 + i * 15}%
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="pointer-events-none absolute -bottom-10 -right-10 size-40 rounded-full bg-forest/20 blur-3xl" />
               </div>
             </div>
           </div>
