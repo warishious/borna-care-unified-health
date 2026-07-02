@@ -235,7 +235,7 @@ export function AdminDashboardMock({ className = "" }: { className?: string }) {
                   <div className="flex-1 h-2 overflow-hidden rounded-full bg-secondary">
                     <div
                       className="h-full rounded-full"
-                      style={{ width: p.w, background: `var(--${p.c.slice(4, -1)})` }}
+                      style={{ width: p.w, background: p.c }}
                     />
                   </div>
                   <div className="w-8 text-right text-[10px] font-semibold text-navy">
