@@ -30,12 +30,12 @@ export function Header() {
         <div
           className={`flex items-center justify-between rounded-2xl px-4 py-2.5 transition-all duration-500 ${
             scrolled
-              ? "glass shadow-card"
+              ? "glass-dark shadow-card"
               : "border border-transparent bg-transparent"
           }`}
         >
           <a href="#top" className="flex items-center gap-2 shrink-0">
-            <Logo variant="dark" className="h-9 sm:h-11 w-auto" />
+            <Logo className="h-9 sm:h-11 w-auto" />
           </a>
 
           <nav className="hidden md:flex items-center gap-1">
@@ -43,7 +43,7 @@ export function Header() {
               <a
                 key={item.href}
                 href={item.href}
-                className="relative rounded-full px-4 py-2 text-sm font-medium text-navy/80 transition-colors hover:text-forest"
+                className="relative rounded-full px-4 py-2 text-sm font-medium text-white/70 transition-colors hover:text-white"
               >
                 {item.label}
               </a>
@@ -53,7 +53,7 @@ export function Header() {
           <div className="hidden md:flex items-center gap-2">
             <a
               href="https://care.borna.ai/"
-              className="rounded-full px-4 py-2 text-sm font-medium text-navy/80 transition-colors hover:text-forest"
+              className="rounded-full px-4 py-2 text-sm font-medium text-white/70 transition-colors hover:text-white"
             >
               Sign in
             </a>
@@ -68,7 +68,7 @@ export function Header() {
 
           <button
             aria-label="Toggle menu"
-            className="md:hidden rounded-full p-2 text-navy"
+            className="md:hidden rounded-full p-2 text-white"
             onClick={() => setOpen((v) => !v)}
           >
             {open ? <X className="size-5" /> : <Menu className="size-5" />}
@@ -76,14 +76,14 @@ export function Header() {
         </div>
 
         {open && (
-          <div className="md:hidden mt-2 glass rounded-2xl p-4 shadow-card animate-fade-up">
+          <div className="md:hidden mt-2 glass-dark rounded-2xl p-4 shadow-card animate-fade-up">
             <div className="flex flex-col gap-1">
               {NAV.map((item) => (
                 <a
                   key={item.href}
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className="rounded-lg px-3 py-2.5 text-sm font-medium text-navy hover:bg-secondary"
+                  className="rounded-lg px-3 py-2.5 text-sm font-medium text-white/80 hover:bg-white/5"
                 >
                   {item.label}
                 </a>
@@ -91,7 +91,7 @@ export function Header() {
               <div className="mt-2 grid grid-cols-2 gap-2">
                 <a
                   href="https://care.borna.ai/"
-                  className="rounded-full border border-border px-4 py-2.5 text-center text-sm font-medium text-navy"
+                  className="rounded-full border border-white/15 px-4 py-2.5 text-center text-sm font-medium text-white"
                 >
                   Sign in
                 </a>

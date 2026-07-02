@@ -277,15 +277,15 @@ export function FloatingCard({
         : "bg-white text-navy";
   return (
     <div
-      className={`glass shadow-elegant rounded-2xl p-3 pr-4 flex items-center gap-3 ${className}`}
+      className={`glass-elevated shadow-elegant rounded-2xl p-3 pr-4 flex items-center gap-3 ${className}`}
       style={style}
     >
       <div className={`grid size-9 place-items-center rounded-xl ${accentStyles}`}>
         <Icon className="size-4" />
       </div>
       <div className="min-w-0">
-        <div className="text-[11px] font-semibold text-navy leading-tight">{title}</div>
-        <div className="text-[10px] text-muted-foreground leading-tight">{subtitle}</div>
+        <div className="text-[11px] font-semibold text-white leading-tight">{title}</div>
+        <div className="text-[10px] text-white/60 leading-tight">{subtitle}</div>
       </div>
       <CheckCircle2 className="size-3.5 text-moss shrink-0" />
     </div>

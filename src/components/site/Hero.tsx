@@ -11,17 +11,17 @@ export function Hero() {
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center animate-fade-up">
-          <div className="inline-flex items-center gap-2 rounded-full glass px-4 py-1.5 text-xs font-medium text-forest-deep">
+          <div className="inline-flex items-center gap-2 rounded-full glass-elevated px-4 py-1.5 text-xs font-medium text-sage">
             <Sparkles className="size-3.5" />
             <span>Part of the Borna ecosystem · New for 2026</span>
           </div>
-          <h1 className="mt-6 font-display text-5xl sm:text-6xl lg:text-7xl leading-[1.02] text-navy">
+          <h1 className="mt-6 font-display text-5xl sm:text-6xl lg:text-7xl leading-[1.02] text-white">
             Patient engagement software
             <br />
             your clinic{" "}
             <span className="gradient-green-text italic">actually deserves</span>.
           </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed">
+          <p className="mx-auto mt-6 max-w-2xl text-lg text-white/60 leading-relaxed">
             Scheduling, digital forms, secure messaging, online payments and
             multi-branch operations — unified in one intelligent platform your
             patients and reception team will love.
@@ -37,14 +37,14 @@ export function Hero() {
             </a>
             <a
               href="https://borna.ai/demo/"
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-white/60 backdrop-blur px-7 py-3.5 text-sm font-semibold text-navy transition-all hover:border-forest/40 hover:bg-white"
+              className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 backdrop-blur px-7 py-3.5 text-sm font-semibold text-white transition-all hover:border-white/30 hover:bg-white/10"
             >
               Book a demo
               <span aria-hidden>→</span>
             </a>
           </div>
 
-          <div className="mt-6 flex items-center justify-center gap-6 text-xs text-muted-foreground">
+          <div className="mt-6 flex items-center justify-center gap-6 text-xs text-white/50">
             <span className="flex items-center gap-1.5">
               <span className="size-1.5 rounded-full bg-moss animate-pulse" /> HIPAA-aligned
             </span>
