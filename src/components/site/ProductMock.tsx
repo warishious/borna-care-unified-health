@@ -17,27 +17,27 @@ import {
 export function PatientPortalMock({ className = "" }: { className?: string }) {
   return (
     <div
-      className={`relative overflow-hidden rounded-3xl border border-white/60 bg-white shadow-elegant ${className}`}
+      className={`relative overflow-hidden rounded-3xl border border-white/10 bg-surface shadow-elegant ${className}`}
     >
       {/* Window chrome */}
-      <div className="flex items-center gap-2 border-b border-border/60 px-4 py-3">
+      <div className="flex items-center gap-2 border-b border-white/10 bg-surface-2/60 px-4 py-3">
         <span className="size-2.5 rounded-full bg-[#ff5f57]/70" />
         <span className="size-2.5 rounded-full bg-[#febc2e]/70" />
         <span className="size-2.5 rounded-full bg-[#28c840]/70" />
-        <div className="ml-4 flex-1 rounded-md bg-secondary/70 px-3 py-1 text-[10px] font-medium text-muted-foreground">
+        <div className="ml-4 flex-1 rounded-md bg-white/5 px-3 py-1 text-[10px] font-medium text-muted-foreground">
           care.borna.ai / patient
         </div>
       </div>
 
       <div className="grid grid-cols-[180px_1fr]">
         {/* Sidebar */}
-        <aside className="hidden sm:flex flex-col gap-1 border-r border-border/60 bg-soft/60 p-3 text-xs">
+        <aside className="hidden sm:flex flex-col gap-1 border-r border-white/10 bg-surface-2/40 p-3 text-xs">
           <div className="mb-2 flex items-center gap-2 rounded-lg px-2 py-1.5">
             <div className="grid size-7 place-items-center rounded-full bg-[image:var(--gradient-green)] text-[10px] font-semibold text-white">
               LA
             </div>
             <div>
-              <div className="font-semibold text-navy">Layla A.</div>
+              <div className="font-semibold text-foreground">Layla A.</div>
               <div className="text-[10px] text-muted-foreground">Patient</div>
             </div>
           </div>
@@ -53,8 +53,8 @@ export function PatientPortalMock({ className = "" }: { className?: string }) {
               key={i.label}
               className={`flex items-center gap-2 rounded-lg px-2 py-1.5 ${
                 i.active
-                  ? "bg-white text-forest-deep shadow-sm"
-                  : "text-navy/70"
+                  ? "bg-white/10 text-sage shadow-sm"
+                  : "text-foreground/70"
               }`}
             >
               <i.icon className="size-3.5" />
@@ -70,9 +70,9 @@ export function PatientPortalMock({ className = "" }: { className?: string }) {
               <div className="text-[10px] uppercase tracking-widest text-muted-foreground">
                 Good morning
               </div>
-              <div className="font-display text-xl text-navy">Welcome back, Layla</div>
+              <div className="font-display text-xl text-foreground">Welcome back, Layla</div>
             </div>
-            <div className="hidden sm:flex items-center gap-1 rounded-full bg-secondary px-2.5 py-1 text-[10px] text-navy/70">
+            <div className="hidden sm:flex items-center gap-1 rounded-full bg-white/5 border border-white/10 px-2.5 py-1 text-[10px] text-foreground/70">
               <Bell className="size-3" /> 2 new
             </div>
           </div>
@@ -109,24 +109,24 @@ export function PatientPortalMock({ className = "" }: { className?: string }) {
 
           {/* Two mini cards */}
           <div className="grid grid-cols-2 gap-2">
-            <div className="rounded-xl border border-border/60 bg-white p-3">
+            <div className="rounded-xl border border-white/10 bg-white/5 p-3">
               <div className="flex items-center gap-1.5 text-[10px] text-muted-foreground">
                 <FileText className="size-3" /> Intake form
               </div>
-              <div className="mt-1 text-xs font-semibold text-navy">
+              <div className="mt-1 text-xs font-semibold text-foreground">
                 Medical history
               </div>
-              <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-secondary">
+              <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-white/10">
                 <div className="h-full w-3/4 rounded-full bg-[image:var(--gradient-green)]" />
               </div>
               <div className="mt-1 text-[10px] text-muted-foreground">75% complete</div>
             </div>
-            <div className="rounded-xl border border-border/60 bg-white p-3">
+            <div className="rounded-xl border border-white/10 bg-white/5 p-3">
               <div className="flex items-center gap-1.5 text-[10px] text-muted-foreground">
                 <CreditCard className="size-3" /> Balance
               </div>
-              <div className="mt-1 text-xs font-semibold text-navy">$180.00</div>
-              <button className="mt-2 w-full rounded-md bg-navy py-1 text-[10px] font-semibold text-white">
+              <div className="mt-1 text-xs font-semibold text-foreground">$180.00</div>
+              <button className="mt-2 w-full rounded-md bg-[image:var(--gradient-green)] py-1 text-[10px] font-semibold text-white shadow-glow-green">
                 Pay now
               </button>
             </div>
@@ -143,27 +143,27 @@ export function PatientPortalMock({ className = "" }: { className?: string }) {
 export function AdminDashboardMock({ className = "" }: { className?: string }) {
   return (
     <div
-      className={`relative overflow-hidden rounded-3xl border border-white/60 bg-white shadow-elegant ${className}`}
+      className={`relative overflow-hidden rounded-3xl border border-white/10 bg-surface shadow-elegant ${className}`}
     >
-      <div className="flex items-center gap-2 border-b border-border/60 px-4 py-3">
+      <div className="flex items-center gap-2 border-b border-white/10 bg-surface-2/60 px-4 py-3">
         <span className="size-2.5 rounded-full bg-[#ff5f57]/70" />
         <span className="size-2.5 rounded-full bg-[#febc2e]/70" />
         <span className="size-2.5 rounded-full bg-[#28c840]/70" />
-        <div className="ml-4 flex-1 rounded-md bg-secondary/70 px-3 py-1 text-[10px] font-medium text-muted-foreground">
+        <div className="ml-4 flex-1 rounded-md bg-white/5 px-3 py-1 text-[10px] font-medium text-muted-foreground">
           care.borna.ai / admin
         </div>
       </div>
 
       <div className="grid grid-cols-[56px_1fr]">
-        <aside className="flex flex-col items-center gap-2 border-r border-border/60 bg-navy py-4 text-white/70">
+        <aside className="flex flex-col items-center gap-2 border-r border-white/10 bg-black/40 py-4 text-white/60">
           {[Activity, Calendar, Users, FileText, CreditCard, Building2].map(
             (Icon, i) => (
               <div
                 key={i}
                 className={`grid size-9 place-items-center rounded-xl ${
                   i === 0
-                    ? "bg-[image:var(--gradient-green)] text-white"
-                    : "hover:bg-white/10"
+                    ? "bg-[image:var(--gradient-green)] text-white shadow-glow-green"
+                    : "hover:bg-white/5"
                 }`}
               >
                 <Icon className="size-4" />
@@ -178,14 +178,14 @@ export function AdminDashboardMock({ className = "" }: { className?: string }) {
               <div className="text-[10px] uppercase tracking-widest text-muted-foreground">
                 Practice overview
               </div>
-              <div className="font-display text-xl text-navy">Today · 4 branches</div>
+              <div className="font-display text-xl text-foreground">Today · 4 branches</div>
             </div>
-            <div className="flex gap-1">
-              <div className="rounded-full bg-secondary px-2 py-0.5 text-[10px] text-navy/70">
+            <div className="flex gap-1 items-center">
+              <div className="rounded-full bg-moss/15 border border-moss/30 px-2 py-0.5 text-[10px] text-moss">
                 Live
               </div>
-              <div className="size-6 rounded-full bg-[image:var(--gradient-green)] ring-2 ring-white" />
-              <div className="-ml-2 size-6 rounded-full bg-navy text-[10px] font-semibold text-white ring-2 ring-white grid place-items-center">
+              <div className="size-6 rounded-full bg-[image:var(--gradient-green)] ring-2 ring-surface" />
+              <div className="-ml-2 size-6 rounded-full bg-white/10 text-[10px] font-semibold text-foreground ring-2 ring-surface grid place-items-center">
                 AR
               </div>
             </div>
@@ -201,21 +201,21 @@ export function AdminDashboardMock({ className = "" }: { className?: string }) {
             ].map((k) => (
               <div
                 key={k.label}
-                className="rounded-xl border border-border/60 bg-white p-2.5"
+                className="rounded-xl border border-white/10 bg-white/5 p-2.5"
               >
                 <div className="text-[9px] uppercase tracking-wider text-muted-foreground">
                   {k.label}
                 </div>
-                <div className="mt-0.5 font-display text-lg text-navy">{k.value}</div>
+                <div className="mt-0.5 font-display text-lg text-foreground">{k.value}</div>
                 <div className="text-[9px] font-semibold text-moss">{k.delta}</div>
               </div>
             ))}
           </div>
 
           {/* Schedule grid */}
-          <div className="rounded-xl border border-border/60 bg-white p-3">
+          <div className="rounded-xl border border-white/10 bg-white/5 p-3">
             <div className="mb-2 flex items-center justify-between">
-              <div className="text-xs font-semibold text-navy">Provider schedule</div>
+              <div className="text-xs font-semibold text-foreground">Provider schedule</div>
               <div className="text-[10px] text-muted-foreground">Nov 14</div>
             </div>
             <div className="space-y-1.5">
@@ -226,19 +226,19 @@ export function AdminDashboardMock({ className = "" }: { className?: string }) {
                 { name: "Dr. Nasser", branch: "Bay Area", w: "90%", c: "var(--forest-deep)" },
               ].map((p) => (
                 <div key={p.name} className="flex items-center gap-2">
-                  <div className="w-20 shrink-0 text-[10px] font-medium text-navy">
+                  <div className="w-20 shrink-0 text-[10px] font-medium text-foreground">
                     {p.name}
                   </div>
                   <div className="w-16 shrink-0 text-[9px] text-muted-foreground">
                     {p.branch}
                   </div>
-                  <div className="flex-1 h-2 overflow-hidden rounded-full bg-secondary">
+                  <div className="flex-1 h-2 overflow-hidden rounded-full bg-white/10">
                     <div
                       className="h-full rounded-full"
                       style={{ width: p.w, background: p.c }}
                     />
                   </div>
-                  <div className="w-8 text-right text-[10px] font-semibold text-navy">
+                  <div className="w-8 text-right text-[10px] font-semibold text-foreground">
                     {p.w}
                   </div>
                 </div>
@@ -273,8 +273,8 @@ export function FloatingCard({
     accent === "green"
       ? "bg-[image:var(--gradient-green)] text-white"
       : accent === "navy"
-        ? "bg-navy text-white"
-        : "bg-white text-navy";
+        ? "bg-white/10 text-foreground"
+        : "bg-white text-ink";
   return (
     <div
       className={`glass-elevated shadow-elegant rounded-2xl p-3 pr-4 flex items-center gap-3 ${className}`}
